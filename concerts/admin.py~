@@ -1,0 +1,5 @@
+from concerts.models import Event, Artist
+from django.contrib import admin
+
+admin.site.register(Event)
+admin.site.register(Artist)

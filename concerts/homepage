@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+
+  <h1>Welcome to My BackStage Pass</h1>
+  <p>Login</p>
+
+{% for object in notes %}
+{{ object
+{% endfor %}
+
+{% endblock

@@ -103,9 +103,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'music.urls'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    "/home/agaskil3/music/templates"
 )
 
 INSTALLED_APPS = (
