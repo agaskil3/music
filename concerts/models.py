@@ -50,6 +50,8 @@ class Event(models.Model):
     title_slug = models.SlugField()
     main_acts = models.ManyToManyField(Artist, related_name="main_set")
     opening_acts = models.ManyToManyField(Artist, related_name="opening_set", blank=True, null=True)
+    def get_absolute_url(self): 
+        return "/music/%i/" % self.id 
     def __unicode__(self):
         return self.title
 

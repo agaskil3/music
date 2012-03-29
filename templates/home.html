@@ -1,5 +1,13 @@
-{{ greeting }} 
 
-{% for object in event %}
-{{ object }}
-{% endfor %}
+
+
+
+
+  <h1>Welcome to My BackStage Pass</h1>
+  <p>Login</p>
+
+<ul>{% for object in event %}
+<li><a href="{{ object.get_absolute_url }}">{{ object }}/a></li>
+{% endfor %}</ul>
+
+

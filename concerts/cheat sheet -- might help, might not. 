@@ -1,0 +1,71 @@
+agaskil3@agaskil3-VirtualBox:~$ ls
+Desktop    Downloads         music  myproject  Public     Videos
+Documents  examples.desktop  Music  Pictures   Templates
+agaskil3@agaskil3-VirtualBox:~$ cd music
+agaskil3@agaskil3-VirtualBox:~/music$ python manage.py shell
+Python 2.7.2+ (default, Oct  4 2011, 20:03:08) 
+[GCC 4.6.1] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from music.concerts.models import Event
+>>> notes = Event.objects.all()
+>>> notes 
+[<Event: Eric Church>]
+>>> for item in notes: 
+...     print item
+... for item in notes: 
+  File "<console>", line 3
+    for item in notes:
+      ^
+SyntaxError: invalid syntax
+>>> for item in notes: 
+...     "%s is a giant tool" % item.user
+...     print "%s is a giant tool" % item.user
+...     print item.user, item.name, item.entry
+... 
+KeyboardInterrupt
+>>> for item in notes: 
+...     print item.title
+... 
+Eric Church
+>>> for item in notes: 
+...     print "%s rocks my friggin world" % self.title
+... 
+Traceback (most recent call last):
+  File "<console>", line 2, in <module>
+NameError: name 'self' is not defined
+>>> for item in notes: 
+...     print "%s rocks my friggin world" % item.title
+... 
+Eric Church rocks my friggin world
+>>> editor = agaskil3
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'agaskil3' is not defined
+>>> title = "Test 1"
+>>> Event = Concerts.objects.filter(name=title)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Concerts' is not defined
+>>> Event = Concerts.objects.filter(name=title)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Concerts' is not defined
+>>> show = "country"
+>>> event = Concert.object.filter(name="Test 1")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'Concert' is not defined
+>>> event = Event.object.filter(title="Eric Church")
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Event' has no attribute 'object'
+>>> event = Event.objects.filter(title="Eric Church")
+>>> event
+[<Event: Eric Church>]
+>>> show = "Eric Church"
+>>> event = Event.objects.filter(title=show)
+>>> event
+[<Event: Eric Church>]
+>>> 
+

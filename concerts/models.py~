@@ -51,7 +51,7 @@ class Event(models.Model):
     main_acts = models.ManyToManyField(Artist, related_name="main_set")
     opening_acts = models.ManyToManyField(Artist, related_name="opening_set", blank=True, null=True)
     def __unicode__(self):
-        return self.event
+        return self.title
 
 class Photo(models.Model):
     photo = models.CharField(max_length=225)

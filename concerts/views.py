@@ -11,3 +11,8 @@ def home(request):
         'greeting': greeting, 
     })
 
+def detail(request, event_id):
+    event = Event.objects.get(id=event_id)
+    return render_to_response('detail.html', {
+        'event': event,
+    })
